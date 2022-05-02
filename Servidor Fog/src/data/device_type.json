@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Ventilação",
+        "byteId": "0"
+    },
+    {
+        "name": "Sombrite",
+        "byteId": "1"
+    },
+    {
+        "name": "Solo",
+        "byteId": "2"
+    }
+]

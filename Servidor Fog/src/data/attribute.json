@@ -1,0 +1,14 @@
+[
+    {
+        "name": "umidade",
+        "unit": "%"
+    },
+    {
+        "name": "temperatura",
+        "unit": "ºC"
+    },
+    {
+        "name": "CO2",
+        "unit": "ppm"
+    }
+]
