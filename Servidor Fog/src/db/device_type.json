@@ -1,0 +1,15 @@
+[
+    {
+        "_id": { "$oid": "626fe9ef9668ef298f120f67" },
+        "name": "Ventilação",
+        "byteId": "0"
+    },
+    {
+        "name": "Sombrite",
+        "byteId": "1"
+    },
+    {
+        "name": "Solo",
+        "byteId": "2"
+    }
+]

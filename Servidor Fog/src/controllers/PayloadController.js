@@ -33,8 +33,6 @@ module.exports = {
             let payload_attributes_values = [];
             for (let j = 0; j < payloadAttributes.length; j++) {
                 const { attribute, value } = payloadAttributes[j];
-                
-                let a = await Attribute.findById(attribute.toString());
 
                 const { name, unit } = await Attribute.findById(attribute.toString());
 
