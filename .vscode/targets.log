@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu May 12 15:54:51 2022
+# Make data base, printed on Mon May 30 12:14:57 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
 # environment
 LOCALAPPDATA = C:\Users\eduar\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-60fee8d5-8257-48d0-b2bd-61b57c0d4348-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-02dff38a-d509-4bcc-ae27-691180fc86d2-sock
 # environment
 VSCODE_CWD = D:\Dudu\CCO\IC - LRG\ProjetoCentelha\C�digo
 # environment
@@ -41,8 +41,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_11968_KLWGBWJNDNZTBDIL 
-
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_8800_BPUHLOXCEYFBJTDB
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -58,7 +57,7 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\eduar\AppData\Roaming\Code\CachedData\da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = C:\Users\eduar\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LANG = C
 # default
@@ -100,7 +99,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 11968
+VSCODE_PID = 8800
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -132,7 +131,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files\Rockwell Software\RSCommon;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\eduar\AppData\Local\Microsoft\WindowsApps;;C:\Users\eduar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\eduar\AppData\Roaming\npm
+PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Rockwell Software\RSCommon;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\eduar\AppData\Local\Microsoft\WindowsApps;;C:\Users\eduar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\eduar\AppData\Roaming\npm;C:\Program Files\swipl\bin
 # environment
 COMPUTERNAME = DESKTOP-LPEG67N
 # default
@@ -194,7 +193,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\eduar\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.67.1-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.67.2-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -220,9 +219,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 
 # Directories
 
-# . (key d:/Dudu/CCO/IC - LRG/ProjetoCentelha/C�digo, mtime 1652196750): 5 files, no impossibilities.
+# . (key d:/Dudu/CCO/IC - LRG/ProjetoCentelha/C�digo, mtime 1653923687): 7 files, no impossibilities.
 
-# 5 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -279,12 +278,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 12 / storage = 97 B / avg = 8 B
-# current buf: size = 8174 B / used = 97 B / count = 12 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 14 / storage = 129 B / avg = 9 B
+# current buf: size = 8174 B / used = 129 B / count = 14 / avg = 9 B
 
-# strcache performance: lookups = 15 / hit rate = 20%
+# strcache performance: lookups = 17 / hit rate = 17%
 # hash-table stats:
-# Load=12/8192=0%, Rehash=0, Collisions=0/15=0%
-# Finished Make data base on Thu May 12 15:54:51 2022
+# Load=14/8192=0%, Rehash=0, Collisions=0/17=0%
+# Finished Make data base on Mon May 30 12:14:57 2022
 
  

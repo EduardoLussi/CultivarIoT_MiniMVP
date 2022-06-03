@@ -1,0 +1,17 @@
+[
+    {
+        "_id": { "$oid" : "626fea1b9668ef298f120f7e" },
+        "name": "umidade",
+        "unit": "%"
+    },
+    {
+        "_id": { "$oid": "626fea1b9668ef298f120f7f" },
+        "name": "temperatura",
+        "unit": "ºC"
+    },
+    {
+        "_id": { "$oid": "626fea1b9668ef298f120f80" },
+        "name": "CO2",
+        "unit": "ppm"
+    }
+]

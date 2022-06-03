@@ -1,0 +1,5 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'd:/Dudu/CCO/IC - LRG/ProjetoCentelha/C�digo/Servidor Fog'
+docker-compose up
+make: Leaving directory 'd:/Dudu/CCO/IC - LRG/ProjetoCentelha/C�digo/Servidor Fog'
+ 
