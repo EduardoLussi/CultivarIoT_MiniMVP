@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May 30 12:14:57 2022
+# Make data base, printed on Fri Jun 03 14:52:53 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
 # environment
 LOCALAPPDATA = C:\Users\eduar\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-02dff38a-d509-4bcc-ae27-691180fc86d2-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-ae217fdf-6676-4b10-abd5-de7fdf94e021-sock
 # environment
 VSCODE_CWD = D:\Dudu\CCO\IC - LRG\ProjetoCentelha\C�digo
 # environment
@@ -41,7 +41,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_8800_BPUHLOXCEYFBJTDB
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_1196_EHELTRUMQULDJXKU
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -79,7 +79,7 @@ CURDIR := d:/Dudu/CCO/IC - LRG/ProjetoCentelha/C�digo
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -99,7 +99,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 8800
+VSCODE_PID = 1196
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -206,7 +206,8 @@ ALLUSERSPROFILE = C:\ProgramData
 SESSIONNAME = Console
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
-# environment
+# environme 
+nt
 PROCESSOR_REVISION = 9e09
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
@@ -219,9 +220,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 
 # Directories
 
-# . (key d:/Dudu/CCO/IC - LRG/ProjetoCentelha/C�digo, mtime 1653923687): 7 files, no impossibilities.
+# . (key d:/Dudu/CCO/IC - LRG/ProjetoCentelha/C�digo, mtime 1653924498): 6 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 6 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -278,12 +279,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 129 B / avg = 9 B
-# current buf: size = 8174 B / used = 129 B / count = 14 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 13 / storage = 110 B / avg = 8 B
+# current buf: size = 8174 B / used = 110 B / count = 13 / avg = 8 B
 
-# strcache performance: lookups = 17 / hit rate = 17%
+# strcache performance: lookups = 16 / hit rate = 18%
 # hash-table stats:
-# Load=14/8192=0%, Rehash=0, Collisions=0/17=0%
-# Finished Make data base on Mon May 30 12:14:57 2022
+# Load=13/8192=0%, Rehash=0, Collisions=0/16=0%
+# Finished Make data base on Fri Jun 03 14:52:53 2022
 
  
