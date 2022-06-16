@@ -69,17 +69,19 @@ div.device-systems ul.device-systems>li {
 }
 
 div.device-systems ul.device-systems>li ul.device-system {
+    text-align: left;
     padding: 0;
 }
 
-div.device-systems ul.device-systems>li ul.device-system li {
-    display: flex;
+div.device-systems ul.device-systems>li ul.device-system>li {
+    display: block;
     justify-content: space-between;
     line-height: 100%;
 }
 
 div.device-systems ul.device-systems>li ul.device-system li.device-system-value {
-    margin-left: 2vw;
+    display: flex;
+    justify-content: space-between;
 }
 
 div.expand {

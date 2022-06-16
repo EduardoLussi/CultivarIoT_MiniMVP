@@ -6,9 +6,9 @@ const cors = require('cors');
 const app = express();
 
 const server = require('http').Server(app);
-const io = require('socket.io')(server);
+const io = require('socket.io')(server, { cors: { origin: '*' } });
 
-mongoose.connect('mongodb://db:27017/CultivarIoT', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost:27018/CultivarIoT', { useNewUrlParser: true });
 
 app.use((req, res, next) => {
     req.io = io;

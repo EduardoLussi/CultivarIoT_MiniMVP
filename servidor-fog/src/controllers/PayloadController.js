@@ -20,6 +20,8 @@ module.exports = {
             await PayloadAttribute.create({ attribute, payload: payload._id, value });
         }
 
+        req.io.emit(`payload${device_type}`, payloadAttributes);
+
         return res.json(payload);
     },
 

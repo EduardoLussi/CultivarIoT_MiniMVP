@@ -1,5 +1,7 @@
 import { Component } from 'react'
 
+import io from 'socket.io-client'
+
 import './Device.css'
 
 import Chart from './Chart'
@@ -25,6 +27,7 @@ type chartDatapoint = {
 }
 
 type DeviceState = {
+    sensorValues: {},
     attributes: Attribute[],
     attribute: Attribute,
     from: string,
@@ -34,6 +37,7 @@ type DeviceState = {
 
 class Device extends Component<DeviceProps, DeviceState> {
     state: DeviceState = {
+        sensorValues: {},
         attributes: [],
         attribute: {
             _id: "",
@@ -45,8 +49,21 @@ class Device extends Component<DeviceProps, DeviceState> {
         chartData: []
     }
 
+    registerToSocket = () => {
+        const socket = io("http://localhost:3333")        
+        socket.on(`payload${this.props.device._id}`, payload => {
+            let sensorValues: {[key: string]: any} = {}
+            for (let i = 0; i < payload.length; i++) {
+                sensorValues[payload[i].attribute] = payload[i].value
+            }
+            console.log(sensorValues)
+            this.setState({ sensorValues })
+        })
+    }
+
     componentDidUpdate(prevProps: DeviceProps, prevState: DeviceState) {
         if (this.props.device != prevProps.device) {
+            this.registerToSocket();
             this.updateDevice()
         }
         if (this.state.attribute != prevState.attribute || 
@@ -91,17 +108,19 @@ class Device extends Component<DeviceProps, DeviceState> {
                                                 <p>
                                                     {i+1}- {attribute.name}
                                                 </p>
+                                                <ul>
+                                                    <li className="device-system-value">
+                                                        <p>
+                                                            Sensor:
+                                                        </p>
+                                                        <p>
+                                                            {this.state.sensorValues[attribute._id]} {attribute.unit}
+                                                        </p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         )
                                     })}    
-                                    {/* <li className="device-system-value">
-                                        <p>
-                                            Sensor:
-                                        </p>
-                                        <p>
-                                            77%
-                                        </p>
-                                    </li> */}
                                 </ul>
                             </li>
                         </ul>
