@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May 30 09:58:34 2022
+# Make data base, printed on Thu Aug 18 09:17:53 2022
 
 # Variables
 
@@ -25,9 +25,7 @@ VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
 # environment
 LOCALAPPDATA = C:\Users\eduar\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-b7765412-03e5-4c9b-971d-5dbffba3165d-sock
-# environment
-VSCODE_CWD = D:\Dudu\CCO\IC - LRG\ProjetoCentelha\C�digo\Servidor Fog
+VSCODE_CWD = D:\Dudu\CCO\CultivarIoT\C�digo\servidor-fog
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -41,7 +39,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10100_JJIRMRLAZCZLZTOX
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13316_QGRLNSDBUUTUJWWM
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -52,12 +50,10 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 %D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
 # automatic
 ^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
-# environment
-VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\eduar\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+VSCODE_CODE_CACHE_PATH = C:\Users\eduar\AppData\Roaming\Code\CachedData\6d9b74a70ca9c7733b29f0456fd8195364076dda
 # environment
 LANG = C
 # default
@@ -75,11 +71,9 @@ ONEDRIVE = C:\Users\eduar\OneDrive
 # environment
 OPENMODELICAHOME = C:\Program Files\OpenModelica1.18.1-64bit\
 # makefile
-CURDIR := d:/Dudu/CCO/IC - LRG/ProjetoCentelha/C�digo/Servidor Fog
+CURDIR := d:/Dudu/CCO/CultivarIoT/C�digo/servidor-fog
 # environment
-VSCODE_PIPE_LOGGING = true
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -97,9 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
-VSCODE_PID = 10100
+VSCODE_PID = 13316
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -145,8 +137,6 @@ CHOCOLATEYLASTPATHUPDATE = 132953994636421953
 # environment
 LOGONSERVER = \\DESKTOP-LPEG67N
 # environment
-VSCODE_LOG_NATIVE = false
-# environment
 USERNAME = eduar
 # environment
 COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
@@ -155,7 +145,8 @@ COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # environment
 PROGRAMW6432 = C:\Program Files
 # environment
-PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.V 
+BE;.JS;.JSE;.WSF;.WSH;.MSC
 # automatic
 +F = $(notdir $+)
 # environment
@@ -193,7 +184,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\eduar\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.67.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.70.1-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -211,15 +202,16 @@ PROCESSOR_REVISION = 9e09
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 # variable set hash-table stats:
-# Load=99/1024=10%, Rehash=0, Collisions=10/126=8%
+# Load=94/1024=9%, Rehash=0, Collisions=9/121=7%
 
-# Pattern-specific Variable Values
+# Pattern-specific Variable Va 
+lues
 
 # No pattern-specific variable values.
 
 # Directories
 
-# . (key d:/Dudu/CCO/IC - LRG/ProjetoCentelha/C�digo/Servidor Fog, mtime 1652476489): 9 files, no impossibilities.
+# . (key d:/Dudu/CCO/CultivarIoT/C�digo/servidor-fog, mtime 1653923863): 9 files, no impossibilities.
 
 # 9 files, no impossibilities in 1 directories.
 
@@ -292,6 +284,6 @@ down:
 # strcache performance: lookups = 31 / hit rate = 48%
 # hash-table stats:
 # Load=16/8192=0%, Rehash=0, Collisions=0/31=0%
-# Finished Make data base on Mon May 30 09:58:34 2022
+# Finished Make data base on Thu Aug 18 09:17:53 2022
 
  
