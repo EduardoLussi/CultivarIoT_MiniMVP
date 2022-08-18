@@ -11,7 +11,8 @@ header div.home {
 }
 
 header div.home img {
-    height: 2.3vw;
+    height: 3vw;
+    margin: auto 0;
 }
 
 header div.home h1 {
