@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 
 const PayloadSchema = new mongoose.Schema({
     data: { type: Date, default: Date.now },
-    device_type: { 
+    sensor_id: { 
         type: mongoose.Schema.Types.ObjectId, 
-        ref: 'device_type' 
+        ref: 'sensor' 
     },
 });
 

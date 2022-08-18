@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 
 const PayloadAttribute = new mongoose.Schema({
     value: Number,
-    attribute: { 
+    attribute_id: { 
         type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Attribute' 
+        ref: 'attribute' 
     },
-    payload: { 
+    payload_id: { 
         type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Payload' 
-    },
+        ref: 'payload' 
+    }
 });
 
-module.exports = mongoose.model('PayloadAttribute', PayloadAttribute);
+module.exports = mongoose.model('payload_attribute', PayloadAttribute);

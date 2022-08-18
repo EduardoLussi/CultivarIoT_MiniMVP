@@ -1,0 +1,12 @@
+[
+    {
+        "system_id": { "$oid": "62f6a70e9ea9b77db9933dee" },
+        "sensor_type_id": { "$oid": "62f6a7d49ea9b77db9933df1" },
+        "name": "S1"
+    },
+    {
+        "system_id": { "$oid": "62f6a70e9ea9b77db9933dee" },
+        "sensor_type_id": { "$oid": "62f6a7d49ea9b77db9933df1" },
+        "name": "S2"
+    }
+]

@@ -1,12 +1,13 @@
 const express = require('express');
 
 const PayloadController = require('./controllers/PayloadController');
-const DeviceTypeController = require('./controllers/DeviceTypeController');
+const SystemTypeController = require('./controllers/SystemTypeController');
+const SystemController = require('./controllers/SystemController');
 
 const routes = new express.Router();
 
-routes.get('/devices', DeviceTypeController.showAll);
-routes.get('/device', DeviceTypeController.show);
+routes.get('/systemTypes', SystemTypeController.showAll);
+routes.get('/systems', SystemController.showAll);
 routes.post('/payload', PayloadController.store);
 routes.get('/payload', PayloadController.show);
 

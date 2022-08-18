@@ -2,7 +2,7 @@ import { Component } from 'react'
 
 import api from '../api'
 
-import Device from './Device'
+import Systems from './Systems'
 
 import './Content.css'
 
@@ -10,13 +10,13 @@ import menu from './img/menu.png'
 
 class Content extends Component {
     state = {
-        devices: [],
-        device: { _id: "", name: "" },
+        systemTypes: [],
+        systemType: { _id: "", name: "" }
     }
 
     async componentDidMount() {
-        const res = await api.get('devices')
-        this.setState({ devices: res.data, device: res.data[0] })     
+        const res = await api.get('systemTypes')
+        this.setState({ systemTypes: res.data, systemType: res.data[0] })
     }
 
     render() {
@@ -26,20 +26,18 @@ class Content extends Component {
                     <div className="side-menu-content">
                         <button><img src={menu}/></button>
                         <ul>
-                            {this.state.devices.map(device => {
+                            {this.state.systemTypes.map(systemType => {
                                 return (
-                                    <li onClick={() => {this.setState({device})}}>
-                                        <img src={`/src/Views/img/${device['name']}.png`} />
-                                        <p>{device['name']}</p>
+                                    <li onClick={() => {this.setState({ systemType })}}>
+                                        <img src={`/src/Views/img/${systemType['name']}.png`} />
+                                        <p>{systemType['name']}</p>
                                     </li>
                                 )
                             })}
                         </ul>
                     </div>
                 </div>
-                <div className="devices">
-                    <Device device={this.state.device} />
-                </div>
+                <Systems systemType={this.state.systemType}/>
             </div>
         )
     }

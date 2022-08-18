@@ -1,4 +1,5 @@
 const Payload = require('../models/Payload');
+const Sensor = require('../models/Sensor');
 const PayloadAttribute = require('../models/PayloadAttribute');
 
 function linspace(start, stop, num, endpoint = true) {
@@ -9,18 +10,19 @@ function linspace(start, stop, num, endpoint = true) {
 
 module.exports = {
     async store(req, res) {
-        const { device_type } = req.headers;
+        const { sensor_id } = req.headers;
 
-        let payload = await Payload.create({ device_type });
+        let payload = await Payload.create({ sensor_id });
 
         const { payloadAttributes } = req.body;
 
         for (let i = 0; i < payloadAttributes.length; i++) {
-            const { attribute, value } = payloadAttributes[i];
-            await PayloadAttribute.create({ attribute, payload: payload._id, value });
+            const { attribute_id, value } = payloadAttributes[i];
+            await PayloadAttribute.create({ attribute_id, payload_id: payload._id, value });
         }
 
-        req.io.emit(`payload${device_type}`, payloadAttributes);
+        const { system_id } = await Sensor.findOne({ _id: sensor_id });
+        req.io.emit(`payload${system_id}`, { payloadAttributes, sensor_id });
 
         return res.json(payload);
     },

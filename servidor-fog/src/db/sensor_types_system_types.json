@@ -1,0 +1,12 @@
+[
+    {
+        "_id": { "$oid": "62f6aa629ea9b77db9933e0e" },
+        "sensor_type_id": { "$oid": "62f6a7d49ea9b77db9933df1" },
+        "system_type_id": { "$oid": "62f6a70e9ea9b77db9933dee" }
+    },
+    {
+        "_id": { "$oid": "62f6aa629ea9b77db9933e0f" },
+        "sensor_type_id": { "$oid": "62f6a7d49ea9b77db9933df1" },
+        "system_type_id": { "$oid": "62f6a70e9ea9b77db9933dee"}
+    }
+]

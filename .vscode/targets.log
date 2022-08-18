@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jun 03 14:52:53 2022
+# Make data base, printed on Mon Aug 15 14:19:04 2022
 
 # Variables
 
@@ -25,9 +25,7 @@ VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
 # environment
 LOCALAPPDATA = C:\Users\eduar\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-ae217fdf-6676-4b10-abd5-de7fdf94e021-sock
-# environment
-VSCODE_CWD = D:\Dudu\CCO\IC - LRG\ProjetoCentelha\C�digo
+VSCODE_CWD = D:\Dudu\CCO\CultivarIoT\C�digo
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -41,7 +39,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_1196_EHELTRUMQULDJXKU
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_8656_QTMSXENEMVQYXYBA
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -52,12 +50,10 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 %D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
 # automatic
 ^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
-# environment
-VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\eduar\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+VSCODE_CODE_CACHE_PATH = C:\Users\eduar\AppData\Roaming\Code\CachedData\6d9b74a70ca9c7733b29f0456fd8195364076dda
 # environment
 LANG = C
 # default
@@ -75,11 +71,9 @@ ONEDRIVE = C:\Users\eduar\OneDrive
 # environment
 OPENMODELICAHOME = C:\Program Files\OpenModelica1.18.1-64bit\
 # makefile
-CURDIR := d:/Dudu/CCO/IC - LRG/ProjetoCentelha/C�digo
+CURDIR := d:/Dudu/CCO/CultivarIoT/C�digo
 # environment
-VSCODE_PIPE_LOGGING = true
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -97,9 +91,7 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
-VSCODE_PID = 1196
+VSCODE_PID = 8656
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -144,8 +136,6 @@ PROMPT = $P$G
 CHOCOLATEYLASTPATHUPDATE = 132953994636421953
 # environment
 LOGONSERVER = \\DESKTOP-LPEG67N
-# environment
-VSCODE_LOG_NATIVE = false
 # environment
 USERNAME = eduar
 # environment
@@ -193,7 +183,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\eduar\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.67.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.70.1-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -202,17 +192,17 @@ VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.67.2-main-sock
 SUFFIXES := 
 # environment
 ALLUSERSPROFILE = C:\ProgramData
-# environment
+# environmen 
+t
 SESSIONNAME = Console
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
-# environme 
-nt
+# environment
 PROCESSOR_REVISION = 9e09
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 # variable set hash-table stats:
-# Load=99/1024=10%, Rehash=0, Collisions=10/123=8%
+# Load=94/1024=9%, Rehash=0, Collisions=9/118=8%
 
 # Pattern-specific Variable Values
 
@@ -220,9 +210,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 
 # Directories
 
-# . (key d:/Dudu/CCO/IC - LRG/ProjetoCentelha/C�digo, mtime 1653924498): 6 files, no impossibilities.
+# . (key d:/Dudu/CCO/CultivarIoT/C�digo, mtime 1655415365): 7 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -269,7 +259,8 @@ GNUmakefile:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
-#  Failed to be updated.
+#  Failed to be upd 
+ated.
 
 # files hash-table stats:
 # Load=7/1024=1%, Rehash=0, Collisions=0/16=0%
@@ -279,12 +270,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 13 / storage = 110 B / avg = 8 B
-# current buf: size = 8174 B / used = 110 B / count = 13 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 14 / storage = 120 B / avg = 8 B
+# current buf: size = 8174 B / used = 120 B / count = 14 / avg = 8 B
 
-# strcache performance: lookups = 16 / hit rate = 18%
+# strcache performance: lookups = 17 / hit rate = 17%
 # hash-table stats:
-# Load=13/8192=0%, Rehash=0, Collisions=0/16=0%
-# Finished Make data base on Fri Jun 03 14:52:53 2022
+# Load=14/8192=0%, Rehash=0, Collisions=0/17=0%
+# Finished Make data base on Mon Aug 15 14:19:04 2022
 
  
