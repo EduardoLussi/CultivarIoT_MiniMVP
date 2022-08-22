@@ -8,11 +8,11 @@ header {
 
 header div.home {
     display: flex;
+    height: 100%;
 }
 
 header div.home img {
-    height: 3vw;
-    margin: auto 0;
+    height: 100%;
 }
 
 header div.home h1 {

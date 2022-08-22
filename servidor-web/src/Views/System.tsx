@@ -33,13 +33,20 @@ type chartDatapoint = {
     y: number
 }
 
+type sensorData = {
+    sensor: {
+        name: string
+    },
+    payloads: chartDatapoint[]
+}
+
 type SystemState = {
     sensorsValues: {[key: string]: any},
     attributes: Attribute[],
     attribute: Attribute,
     from: string,
     to: string,
-    chartData: chartDatapoint[]
+    chartData: sensorData[]
 }
 
 class System extends Component<SystemProps, SystemState> {
@@ -66,10 +73,9 @@ class System extends Component<SystemProps, SystemState> {
                 if (!sensorsValues[sensor_id]) {
                     sensorsValues[sensor_id] = {}
                 }
-                sensorsValues[sensor_id][payloadAttributes[i].attribute] = payloadAttributes[i].value
+                sensorsValues[sensor_id][payloadAttributes[i].attribute_id] = payloadAttributes[i].value
             }
             this.setState({ sensorsValues })
-            console.log(sensorsValues)
         })
     }
 
@@ -81,25 +87,26 @@ class System extends Component<SystemProps, SystemState> {
         if (this.state.attribute != prevState.attribute || 
             this.state.from != prevState.from || 
             this.state.to != prevState.to) {
-            // this.updateChart()
+            this.updateChart()
         }
     }
 
     async updateChart() {
         const res = await api.get("payload", {
             headers: {
-                "system_type": this.props.system._id,
+                "system_id": this.props.system._id,
                 "data_from": this.state.from,
                 "data_to": this.state.to,
-                "attribute": this.state.attribute._id
+                "attribute_id": this.state.attribute._id
             }
         })
         this.setState({ chartData: res.data })
     }
 
-    async updateSystem() {
-        const res = await api.get("system", { headers: { "system_type_id": this.props.system._id } })
-        this.setState({ attributes: res.data, attribute: res.data.length ? res.data[0] : {}, from: "", to: "" })
+    updateSystem() {
+        this.setState({ attributes: this.props.system.attributes, 
+                        attribute: this.props.system.attributes[0], 
+                        from: "", to: "" })
     }
 
     render() {
@@ -136,14 +143,14 @@ class System extends Component<SystemProps, SystemState> {
                     </div>
                 </div>
 
-                {/* <div className="expand-data">
+                <div className="expand-data">
                     <div className="graph-container">
                         <div className="graph-content">
                             <div className="graph-attributes">
                                 <ul>
                                     {this.state.attributes.map((attribute, i) => {
                                         return (
-                                            <li key={i} onClick={() => { this.setState({attribute: attribute}) }}>
+                                            <li key={i} onClick={() => { this.setState({ attribute: attribute }) }}>
                                                 {i+1}<span>{i+1} - {attribute.name}</span>                
                                             </li>
                                         )
@@ -159,16 +166,16 @@ class System extends Component<SystemProps, SystemState> {
                     <div className="graph-search">
                         <div className="from-to">
                             <div>
-                                <p>From:</p>
+                                <p>De:</p>
                                 <input type="datetime-local" step="1" onChange={e => this.setState({from: e.target.value})}/>
                             </div>
                             <div>
-                                <p>To:</p>
+                                <p>Até:</p>
                                 <input type="datetime-local" step="1" onChange={e => this.setState({to: e.target.value})}/>
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div> 
         )
     }

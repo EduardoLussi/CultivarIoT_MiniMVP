@@ -1,6 +1,4 @@
 const SystemType = require('../models/SystemType');
-const PDUAttribute = require('../models/PDUAttribute');
-const Attribute = require('../models/Attribute');
 
 module.exports = {
     async showAll(req, res) {

@@ -9,13 +9,20 @@ type chartDatapoint = {
   y: number
 }
 
+type sensorData = {
+  sensor: {
+    name: string
+  },
+  payloads: chartDatapoint[]
+}
+
 type ChartProps = {
   attribute: {
     _id: string,
     name: string,
     unit: string
   },
-  data: chartDatapoint[]
+  data: sensorData[]
 }
 
 class Chart extends Component<ChartProps> {
@@ -23,10 +30,12 @@ class Chart extends Component<ChartProps> {
     return (
       <div className="chart">
         <ResponsiveLine
-          data={[{
-            "id": this.props.attribute.name,
-            "data": this.props.data
-          }]}
+          data={this.props.data.map(sensorData => {
+            return {
+              id: sensorData.sensor.name,
+              data: sensorData.payloads
+            }
+          })}
           margin={{ top: 10, right: 150, bottom: 110, left: 60 }}
           xScale={{ format: "%Y-%m-%dT%H:%M:%S.%LZ", type: 'time' }}
           yScale={{ type: 'linear' }}
