@@ -6,12 +6,15 @@ import Device from './Device'
 
 import './Content.css'
 
+import io from 'socket.io-client'
+
 import menu from './img/menu.png'
 
 class Content extends Component {
     state = {
         devices: [],
         device: { _id: "", name: "" },
+        socketio: io("http://localhost:3333")
     }
 
     async componentDidMount() {
@@ -38,7 +41,7 @@ class Content extends Component {
                     </div>
                 </div>
                 <div className="devices">
-                    <Device device={this.state.device} />
+                    <Device device={this.state.device} socket={this.state.socketio} />
                 </div>
             </div>
         )

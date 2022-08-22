@@ -26,9 +26,18 @@ module.exports = {
     },
 
     async show(req, res) {
-        const { device_type, data_from, data_to, attribute } = req.headers;
+        const { device_type, attribute } = req.headers;
+        let { data_from, data_to } = req.headers;
 
-        const payloads = await Payload.find({ device_type_id: device_type, data: { $gte: data_from, $lte: data_to } });
+        if (data_from) data_from += "-03:00";
+        if (data_to) data_to += "-03:00";
+
+        const payloads = await Payload.find({ device_type_id: device_type, 
+                                              data: { 
+                                                $gte: data_from, 
+                                                $lte: data_to
+                                              } 
+                                            });
 
         let payloads_values = [];
 

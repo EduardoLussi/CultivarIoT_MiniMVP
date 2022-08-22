@@ -5,10 +5,12 @@
         "byteId": "0"
     },
     {
+        "_id": { "$oid": "62fe385f00a0bf6fc9ef8fa6" },
         "name": "Sombrite",
         "byteId": "1"
     },
     {
+        "_id": { "$oid": "62fe385f00a0bf6fc9ef8fa7" },
         "name": "Solo",
         "byteId": "2"
     }

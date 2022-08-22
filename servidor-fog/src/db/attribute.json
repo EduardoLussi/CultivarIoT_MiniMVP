@@ -1,17 +1,22 @@
 [
     {
         "_id": { "$oid" : "626fea1b9668ef298f120f7e" },
-        "name": "umidade",
+        "name": "Umidade",
         "unit": "%"
     },
     {
         "_id": { "$oid": "626fea1b9668ef298f120f7f" },
-        "name": "temperatura",
+        "name": "Temperatura",
         "unit": "ºC"
     },
     {
         "_id": { "$oid": "626fea1b9668ef298f120f80" },
         "name": "CO2",
         "unit": "ppm"
+    },
+    {
+        "_id": { "$oid": "62fe406600a0bf6fc9ef8fb9" },
+        "name": "Radiação",
+        "unit": "MJ m-2"
     }
 ]

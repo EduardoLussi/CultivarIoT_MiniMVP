@@ -134,7 +134,7 @@ div.graph-attributes>ul {
 
 div.graph-attributes>ul li {
     margin: 0 auto 2vh auto;
-    background: #ff7928;
+    background: #f1b24a;
     border-radius: 100%;
     color: white;
     width: 2.5vw;
@@ -149,14 +149,14 @@ div.graph-attributes>ul li span {
 }
 
 div.graph-attributes>ul li:hover {
-    background: #ff6000;
+    background: #f1b24a;
     border-radius: 30px;
 }
 div.graph-attributes>ul li:hover span {
     display: block;
     position: absolute;
     z-index: 9;
-    background: #ff6000;
+    background: #f1b24a;
     border: 1px solid black;
     border-left: none;
     margin-top: -2.55vw;

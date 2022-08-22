@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 18 09:17:53 2022
+# Make data base, printed on Mon Aug 22 10:53:51 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13316_QGRLNSDBUUTUJWWM
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_16452_INPZEWQGKEEZOKRN
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -53,7 +53,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\eduar\AppData\Roaming\Code\CachedData\6d9b74a70ca9c7733b29f0456fd8195364076dda
+VSCODE_CODE_CACHE_PATH = C:\Users\eduar\AppData\Roaming\Code\CachedData\e4503b30fc78200f846c62cf8091b76ff5547662
 # environment
 LANG = C
 # default
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 13316
+VSCODE_PID = 16452
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -145,8 +145,7 @@ COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # environment
 PROGRAMW6432 = C:\Program Files
 # environment
-PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.V 
-BE;.JS;.JSE;.WSF;.WSH;.MSC
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 # automatic
 +F = $(notdir $+)
 # environment
@@ -184,7 +183,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\eduar\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.70.1-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.70.2-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -204,8 +203,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 # variable set hash-table stats:
 # Load=94/1024=9%, Rehash=0, Collisions=9/121=7%
 
-# Pattern-specific Variable Va 
-lues
+# Pattern-specific Variable Values
 
 # No pattern-specific variable values.
 
@@ -271,7 +269,8 @@ down:
 	docker-compose down
 
 # files hash-table stats:
-# Load=8/1024=1%, Rehash=0, Collisions=0/26=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/26 
+=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
@@ -284,6 +283,6 @@ down:
 # strcache performance: lookups = 31 / hit rate = 48%
 # hash-table stats:
 # Load=16/8192=0%, Rehash=0, Collisions=0/31=0%
-# Finished Make data base on Thu Aug 18 09:17:53 2022
+# Finished Make data base on Mon Aug 22 10:53:51 2022
 
  

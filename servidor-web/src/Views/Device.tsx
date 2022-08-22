@@ -1,7 +1,5 @@
 import { Component } from 'react'
 
-import io from 'socket.io-client'
-
 import './Device.css'
 
 import Chart from './Chart'
@@ -12,7 +10,8 @@ type DeviceProps = {
     device: {
         _id: string,
         name: string,
-    }
+    },
+    socket: any
 }
 
 type Attribute = {
@@ -50,21 +49,19 @@ class Device extends Component<DeviceProps, DeviceState> {
     }
 
     registerToSocket = () => {
-        const socket = io("http://localhost:3333")        
-        socket.on(`payload${this.props.device._id}`, payload => {
+        this.props.socket.on(`payload${this.props.device._id}`, payload => {
             let sensorValues: {[key: string]: any} = {}
             for (let i = 0; i < payload.length; i++) {
                 sensorValues[payload[i].attribute] = payload[i].value
             }
-            console.log(sensorValues)
             this.setState({ sensorValues })
         })
     }
 
     componentDidUpdate(prevProps: DeviceProps, prevState: DeviceState) {
         if (this.props.device != prevProps.device) {
-            this.registerToSocket();
-            this.updateDevice()
+            this.updateDevice(prevProps.device._id)
+            this.registerToSocket()
         }
         if (this.state.attribute != prevState.attribute || 
             this.state.from != prevState.from || 
@@ -74,6 +71,13 @@ class Device extends Component<DeviceProps, DeviceState> {
     }
 
     async updateChart() {
+        const headers = {
+            "device_type": this.props.device._id,
+            "data_from": this.state.from,
+            "data_to": this.state.to,
+            "attribute": this.state.attribute._id
+        }
+        console.log(headers)
         const res = await api.get("payload", {
             headers: {
                 "device_type": this.props.device._id,
@@ -82,12 +86,14 @@ class Device extends Component<DeviceProps, DeviceState> {
                 "attribute": this.state.attribute._id
             }
         })
+        console.log(res.data)
         this.setState({ chartData: res.data })
     }
 
-    async updateDevice() {
+    async updateDevice(prevDeviceId: string) {
+        this.props.socket.off(`payload${prevDeviceId}`)
         const res = await api.get("device", { headers: { "device_type_id": this.props.device._id } })
-        this.setState({ attributes: res.data, attribute: res.data.length ? res.data[0] : {}, from: "", to: "" })
+        this.setState({ sensorValues: {}, attributes: res.data, attribute: res.data.length ? res.data[0] : {}, from: "", to: "" })
     }
 
     render() {
@@ -150,11 +156,11 @@ class Device extends Component<DeviceProps, DeviceState> {
                     <div className="graph-search">
                         <div className="from-to">
                             <div>
-                                <p>From:</p>
+                                <p>De:</p>
                                 <input type="datetime-local" step="1" onChange={e => this.setState({from: e.target.value})}/>
                             </div>
                             <div>
-                                <p>To:</p>
+                                <p>Até:</p>
                                 <input type="datetime-local" step="1" onChange={e => this.setState({to: e.target.value})}/>
                             </div>
                         </div>
