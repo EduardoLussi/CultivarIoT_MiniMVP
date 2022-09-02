@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug 30 16:12:30 2022
+# Make data base, printed on Fri Sep 02 13:56:15 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12600_DQOGMBWUXRFBKUYC
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12900_ACRMPKEKLZUFYLKN
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 12600
+VSCODE_PID = 12900
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -209,9 +209,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 
 # Directories
 
-# . (key d:/Dudu/CCO/CultivarIoT/CultivarIoT_MiniMVP/servidor-fog, mtime 1661547517): 9 files, no impossibilities.
+# . (key d:/Dudu/CCO/CultivarIoT/CultivarIoT_MiniMVP/servidor-fog, mtime 1661973187): 10 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 10 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -228,8 +228,7 @@ Makefile:
 
 logs:
 #  Phony target (prerequisite of .PHONY).
-#  Implic 
-it rule search has not been done.
+#  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 14):
@@ -277,12 +276,12 @@ down:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 16 / storage = 132 B / avg = 8 B
-# current buf: size = 8174 B / used = 132 B / count = 16 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 17 / storage = 142 B / avg = 8 B
+# current buf: size = 8174 B / used = 142 B / count = 17 / avg = 8 B
 
-# strcache performance: lookups = 31 / hit rate = 48%
+# strcache performance: lookups = 32 / hit rate = 46%
 # hash-table stats:
-# Load=16/8192=0%, Rehash=0, Collisions=0/31=0%
-# Finished Make data base on Tue Aug 30 16:12:30 2022
+# Load=17/8192=0%, Rehash=0, Collisions=0/32=0%
+# Finished Make data base on Fri Sep 02 13:56:15 2022
 
  
