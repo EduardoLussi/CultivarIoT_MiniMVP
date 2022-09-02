@@ -16,7 +16,6 @@ class Content extends Component {
 
     async componentDidMount() {
         const res = await api.get('systemTypes')
-        console.log(res.data)
         this.setState({ systemTypes: res.data, systemType: res.data[0] })
     }
 

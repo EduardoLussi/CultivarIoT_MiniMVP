@@ -4,6 +4,8 @@ import api from '../api'
 
 import System from './System'
 
+import './Systems.css'
+
 class Systems extends Component {
     state = {
         systems: []
@@ -20,10 +22,14 @@ class Systems extends Component {
 
     render() {
         return (
-            <div className="systemsTypes">
-                {this.state.systems.map(system => {
-                    return <System system={system} />
-                })}
+            <div className="systems">
+                <ul className="systemsList">
+                    {this.state.systems.map(system => (
+                        <li>
+                            <System system={system} />
+                        </li>
+                    ))}
+                </ul>
             </div>
         )
     }

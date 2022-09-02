@@ -7,13 +7,12 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Fri Sep 02 13:56:15 2022
+# Make data base, printed on Fri Sep 02 14:24:48 2022
 
 # Variables
 
-# environment
-FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -31,7 +30,8 @@ CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
 SYSTEMROOT = C:\Windows
 # environment
-PROCESSOR_LEVEL = 6
+PROCESSOR_LEVEL  
+= 6
 # environment
 PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
 # default
@@ -39,9 +39,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12900_ACRMPKEKLZUFYLKN
-# environment
-FPS_BROWSER_USER_PROFILE_STRING = Default
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14688_AZYHWIPLRSSIBWXS
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -53,7 +51,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\eduar\AppData\Roaming\Code\CachedData\e4503b30fc78200f846c62cf8091b76ff5547662
+VSCODE_CODE_CACHE_PATH = C:\Users\eduar\AppData\Roaming\Code\CachedData\784b0177c56c607789f9638da7b6bf3230d47a8c
 # environment
 LANG = C
 # default
@@ -91,7 +89,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 12900
+VSCODE_PID = 14688
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -126,6 +124,7 @@ MAKE = $(MAKE_COMMAND)
 PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Rockwell Software\RSCommon;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\eduar\AppData\Local\Microsoft\WindowsApps;;C:\Users\eduar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\eduar\AppData\Roaming\npm;C:\Program Files\swipl\bin
 # environment
 COMPUTERNAME = DESKTOP-LPEG67N
+ 
 # default
 MAKEFILES := 
 # automatic
@@ -156,6 +155,8 @@ USERDOMAIN = DESKTOP-LPEG67N
 GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
+# environment
+__COMPAT_LAYER = DetectorsAppHealth
 # makefile
 .DEFAULT_GOAL := up
 # default
@@ -183,7 +184,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\eduar\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.70.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.71.0-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -191,7 +192,8 @@ VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.70.2-main-sock
 # default
 SUFFIXES := 
 # environment
-ALLUSERSPROFILE = C:\ProgramData
+ALLUSERSPROFILE = C:\Progr 
+amData
 # environment
 SESSIONNAME = Console
 # default
@@ -201,11 +203,12 @@ PROCESSOR_REVISION = 9e09
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 # variable set hash-table stats:
-# Load=94/1024=9%, Rehash=0, Collisions=9/121=7%
+# Load=93/1024=9%, Rehash=0, Collisions=8/120=7%
 
 # Pattern-specific Variable Values
 
 # No pattern-specific variable values.
+ 
 
 # Directories
 
@@ -282,6 +285,6 @@ down:
 # strcache performance: lookups = 32 / hit rate = 46%
 # hash-table stats:
 # Load=17/8192=0%, Rehash=0, Collisions=0/32=0%
-# Finished Make data base on Fri Sep 02 13:56:15 2022
+# Finished Make data base on Fri Sep 02 14:24:48 2022
 
  

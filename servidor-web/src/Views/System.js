@@ -59,7 +59,6 @@ class System extends Component {
                 "attribute_id": this.state.attribute._id
             }
         })
-        console.log(res.data)
         this.setState({ chartData: res.data })
     }
 
@@ -111,7 +110,8 @@ class System extends Component {
                                     {this.state.attributes.map((attribute, i) => {
                                         return (
                                             <li key={i} onClick={() => { this.setState({ attribute: attribute }) }}>
-                                                {i+1}<span>{i+1} - {attribute.name}</span>                
+                                                {i+1}
+                                                <span>{i+1} - {attribute.name}</span>                
                                             </li>
                                         )
                                     })}
