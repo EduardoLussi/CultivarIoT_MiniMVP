@@ -1,10 +1,11 @@
 FROM node:latest
 WORKDIR /app
 
+ENV PATH /app/node_modules/.bin:$PATH
+
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm uninstall react-scripts
-RUN npm install -D react-scripts
+
 RUN npm install
 COPY . ./
 CMD ["npm", "start"]
