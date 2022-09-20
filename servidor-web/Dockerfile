@@ -1,8 +1,11 @@
 FROM node:latest
 WORKDIR /app
 
+ENV PATH /app/node_modules/.bin:$PATH
+
 COPY package.json ./
 COPY package-lock.json ./
-COPY ./ ./
-RUN npm install --legacy-peer-deps
-CMD ["npm", "run", "start"]
+
+RUN npm install
+COPY . ./
+CMD ["npm", "start"]
