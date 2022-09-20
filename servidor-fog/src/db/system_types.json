@@ -1,0 +1,6 @@
+[
+    {
+        "_id": { "$oid": "62f6a67c9ea9b77db9933deb" },
+        "name": "Temperatura e Umidade"
+    }
+]

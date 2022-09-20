@@ -14,10 +14,21 @@ class Systems extends Component {
     async componentDidMount() {
         const res = await api.get('systems', {
             headers: {
-                system_type_id: this.props.systemType._id
+                system_type: this.props.systemType._id
             }
         })
         this.setState({ systems: res.data })
+    }
+
+    async componentDidUpdate(prevProps, prevState) {
+        if (this.props !== prevProps) {
+            const res = await api.get('systems', {
+                headers: {
+                    system_type: this.props.systemType._id
+                }
+            })
+            this.setState({ systems: res.data })
+        }
     }
 
     render() {

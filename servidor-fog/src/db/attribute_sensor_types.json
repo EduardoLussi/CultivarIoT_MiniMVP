@@ -1,12 +1,12 @@
 [
     {
         "_id": { "$oid": "62f6a9b09ea9b77db9933e06" },
-        "sensor_type_id": { "$oid": "62f6a7d49ea9b77db9933df1" },
-        "attribute_id": { "$oid": "626fea1b9668ef298f120f7e" }
+        "sensor_type": { "$oid": "62f6a7d49ea9b77db9933df1" },
+        "attribute": { "$oid": "626fea1b9668ef298f120f7e" }
     },
     {
         "_id": { "$oid": "62f6a9b09ea9b77db9933e07" },
-        "sensor_type_id": { "$oid": "62f6a7d49ea9b77db9933df1" },
-        "attribute_id": { "$oid": "626fea1b9668ef298f120f7f"}
+        "sensor_type": { "$oid": "62f6a7d49ea9b77db9933df1" },
+        "attribute": { "$oid": "626fea1b9668ef298f120f7f"}
     }
 ]

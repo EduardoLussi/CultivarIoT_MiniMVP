@@ -1,12 +1,12 @@
 [
     {
         "_id": { "$oid": "62f6a70e9ea9b77db9933dee" },
-        "system_type_id": { "$oid": "62f6a67c9ea9b77db9933deb" },
+        "system_type": { "$oid": "62f6a67c9ea9b77db9933deb" },
         "name": "Sistema 1-1"
     },
     {
         "_id": { "$oid": "63123eb8dce431fb07b98447" },
-        "system_type_id": { "$oid": "62f6a67c9ea9b77db9933deb" },
+        "system_type": { "$oid": "62f6a67c9ea9b77db9933deb" },
         "name": "Sistema 1-2"
     }
 ]

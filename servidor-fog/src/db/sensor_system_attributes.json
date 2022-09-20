@@ -1,0 +1,33 @@
+[
+    {
+        "_id": { "$oid": "632a24cda61c5ec44ef64275" },
+        "sensor": { "$oid": "6309270ffaa6976990d15eac" },
+        "system_attributee": { "$oid": "632a2152a61c5ec44ef64261" }
+    },
+    {
+        "_id": { "$oid": "632a24cda61c5ec44ef64276" },
+        "sensor": { "$oid": "6309270ffaa6976990d15eac" },
+        "system_attributee": { "$oid": "632a2152a61c5ec44ef64262" }
+    },
+    {
+        "_id": { "$oid": "632a24cda61c5ec44ef64277" },
+        "sensor": { "$oid": "6309270ffaa6976990d15ead" },
+        "system_attributee": { "$oid": "632a2152a61c5ec44ef64261" }
+    },
+    {
+        "_id": { "$oid": "632a24cda61c5ec44ef64278" },
+        "sensor": { "$oid": "6309270ffaa6976990d15ead" },
+        "system_attributee": { "$oid": "632a2152a61c5ec44ef64262" }
+    },
+    {
+        "_id": { "$oid": "632a24cda61c5ec44ef64279" },
+        "sensor": { "$oid": "63123f72dce431fb07b9844c" },
+        "system_attributee": { "$oid": "632a222fa61c5ec44ef64269" }
+    },
+    {
+        "_id": { "$oid": "632a24cda61c5ec44ef6427a" },
+        "sensor": { "$oid": "63123f72dce431fb07b9844c" },
+        "system_attributee": { "$oid": "632a222fa61c5ec44ef6426a" }
+    }
+    
+]

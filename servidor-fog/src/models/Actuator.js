@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const ActuatorSchema = new mongoose.Schema({
-    system_id: { 
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: 'system' 
-    },
-    address: String
+    address: String,
+    actuator_type: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'actuator_type'
+    }
 });
 
 module.exports = mongoose.model('actuator', ActuatorSchema);

@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const AttributeSensorType = new mongoose.Schema({
-    attribute_id: { 
+    attribute: { 
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'attribute' 
     },
-    sensor_type_id: { 
+    sensor_type: { 
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'sensor_type' 
     }

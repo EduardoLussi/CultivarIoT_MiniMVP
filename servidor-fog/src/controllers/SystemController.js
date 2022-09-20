@@ -1,50 +1,45 @@
 const System = require('../models/System');
 const Sensor = require('../models/Sensor');
-const AttributeSensorType = require('../models/AttributeSensorType');
 const Attribute = require('../models/Attribute');
+const SystemTypeAttribute = require('../models/SystemTypeAttribute');
+const SystemAttribute = require('../models/SystemAttribute');
+const SensorSystemAttribute = require('../models/SensorSystemAttribute');
 
 module.exports = {
     async showAll(req, res) {
-        function findAttribute(attribute, list) {
-            for (let i = 0; i < list.length; i++) {
-                if (list[i]._id == attribute) {
-                    return i;
-                }
-            }
-            return -1;
-        }
-
-        let systems = await System.find({ system_type_id: req.system_type_id });
-
-        systemsInfo = []
-        for (let i = 0; i < systems.length; i++) {
-            const { _id, name } = systems[i];
-            const sensors = await Sensor.find({ system_id: _id });
-
-            systemInfo = { _id, name };
-
-            systemInfo.attributes = [];
-            for (let j = 0; j < sensors.length; j++) {
-                const { _id, name, sensor_type_id } = sensors[j];
-                const attributeSensorTypes = await AttributeSensorType.find({ sensor_type_id });
-
-                for (let k = 0; k < attributeSensorTypes.length; k++) {
-                    const { attribute_id } = attributeSensorTypes[k];
-                    
-                    attrIndex = findAttribute(attribute_id.toString(), systemInfo.attributes);
-                    if (attrIndex == -1) {
-                        attrIndex = systemInfo.attributes.length;
-                        const { _id, name, unit } = await Attribute.findOne({ _id: attribute_id.toString() });
-                        systemInfo.attributes.push({ _id: _id.toString(), name, unit, sensors: [] });
-                    }
-                            
-                    systemInfo.attributes[attrIndex].sensors.push({ _id: _id.toString(), name });
-                }
-            }
-
-            systemsInfo.push(systemInfo);
-        }
+        try {
+            const { system_type } = req.headers;
         
-        return res.json(systemsInfo);
+            const systems = await System.find({ system_type });
+            const systemTypeAttributes = await SystemTypeAttribute.find({ system_type });
+            
+            systemsInfo = []
+            for (let i = 0; i < systems.length; i++) {
+                const { _id: systemId, name } = systems[i];
+                systemInfo = { _id: systemId, name };
+
+                systemInfo.attributes = [];
+                for (let j = 0; j < systemTypeAttributes.length; j++) {
+                    const { _id: idSystemTypeAttribute, attribute } = systemTypeAttributes[j];
+                    const { _id } = await SystemAttribute.findOne({ system: systemId, system_type_attribute: idSystemTypeAttribute });
+                    
+                    const { name, unit } = await Attribute.findOne({ _id: attribute.toString() });
+                    systemInfo.attributes.push({ _id: attribute.toString(), name, unit, sensors: [] });
+
+                    const sensorSystemAttributes = await SensorSystemAttribute.find({ system_attribute: _id });
+                    for (let k = 0; k < sensorSystemAttributes.length; k++) {                                     
+                        const { _id, name } = await Sensor.findOne({ _id: sensorSystemAttributes[k].sensor });
+                        systemInfo.attributes[j].sensors.push({ _id: _id.toString(), name });
+                    }
+                }
+
+                systemsInfo.push(systemInfo);
+            }
+            
+            return res.json(systemsInfo);
+        } catch (error) {
+            console.log(error);
+            return res.json([]);
+        }
     }
 }

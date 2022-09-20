@@ -8,6 +8,7 @@ div.side-menu {
     width: 3%;
     background: #164a41;
     position: absolute;
+    z-index: 1;
     left: 0;
     top: 7vh;
 }

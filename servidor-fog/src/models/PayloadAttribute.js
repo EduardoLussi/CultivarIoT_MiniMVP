@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 
 const PayloadAttribute = new mongoose.Schema({
     value: Number,
-    attribute_id: { 
+    attribute: { 
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'attribute' 
     },
-    payload_id: { 
+    payload: { 
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'payload' 
     }

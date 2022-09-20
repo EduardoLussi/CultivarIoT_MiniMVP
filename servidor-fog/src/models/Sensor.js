@@ -1,11 +1,7 @@
 const mongoose = require('mongoose');
 
 const SensorSchema = new mongoose.Schema({
-    system_id: { 
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: 'system' 
-    }, 
-    sensor_type_id: { 
+    sensor_type: { 
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'sensor_type' 
     },

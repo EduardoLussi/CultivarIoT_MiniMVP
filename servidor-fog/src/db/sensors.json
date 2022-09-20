@@ -1,20 +1,17 @@
 [
     {
         "_id": { "$oid": "6309270ffaa6976990d15eac" },
-        "system_id": { "$oid": "62f6a70e9ea9b77db9933dee" },
-        "sensor_type_id": { "$oid": "62f6a7d49ea9b77db9933df1" },
+        "sensor_type": { "$oid": "62f6a7d49ea9b77db9933df1" },
         "name": "S1"
     },
     {
         "_id": { "$oid": "6309270ffaa6976990d15ead" },
-        "system_id": { "$oid": "62f6a70e9ea9b77db9933dee" },
-        "sensor_type_id": { "$oid": "62f6a7d49ea9b77db9933df1" },
+        "sensor_type": { "$oid": "62f6a7d49ea9b77db9933df1" },
         "name": "S2"
     },
     {
         "_id": { "$oid": "63123f72dce431fb07b9844c" },
-        "system_id": { "$oid": "63123eb8dce431fb07b98447" },
-        "sensor_type_id": { "$oid": "62f6a7d49ea9b77db9933df1" },
+        "sensor_type": { "$oid": "62f6a7d49ea9b77db9933df1" },
         "name": "S3"
     }
 ]

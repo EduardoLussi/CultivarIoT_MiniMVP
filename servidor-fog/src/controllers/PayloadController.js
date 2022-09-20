@@ -2,6 +2,10 @@ const Payload = require('../models/Payload');
 const Sensor = require('../models/Sensor');
 const PayloadAttribute = require('../models/PayloadAttribute');
 const AttributeSensorType = require('../models/AttributeSensorType');
+const SystemAttribute = require('../models/SystemAttribute');
+const SystemTypeAttribute = require('../models/SystemTypeAttribute');
+const System = require('../models/System');
+const SensorSystemAttribute = require('../models/SensorSystemAttribute');
 
 function linspace(start, stop, num, endpoint = true) {
     const div = endpoint ? (num - 1) : num;
@@ -13,17 +17,18 @@ module.exports = {
     async store(req, res) {
         const { sensor_id } = req.headers;
 
-        let payload = await Payload.create({ sensor_id });
+        let payload = await Payload.create({ sensor: sensor_id });
 
         const { payloadAttributes } = req.body;
 
         for (let i = 0; i < payloadAttributes.length; i++) {
             const { attribute_id, value } = payloadAttributes[i];
-            await PayloadAttribute.create({ attribute_id, payload_id: payload._id, value });
+            await PayloadAttribute.create({ attribute: attribute_id, payload: payload._id, value });
         }
 
-        const { system_id } = await Sensor.findOne({ _id: sensor_id });
-        req.io.emit(`payload${system_id}`, { payloadAttributes, sensor_id });
+        const { system_attribute } = await SensorSystemAttribute.findOne({ sensor: sensor_id });
+        const { system } = await SystemAttribute.findOne({ _id: system_attribute });
+        req.io.emit(`payload${system}`, { payloadAttributes, sensor_id });
         return res.json(payload);
     },
 
@@ -34,18 +39,21 @@ module.exports = {
         if (data_from) data_from += "-03:00";
         if (data_to) data_to += "-03:00";
 
-        const sensor_types = await AttributeSensorType.find({ attribute_id });
+        const { system_type } = await System.findOne({ _id: system_id });
+        const { _id: system_type_attribute } = await SystemTypeAttribute.findOne({ attribute: attribute_id, system_type });
 
+        const { _id: system_attribute } = await SystemAttribute.findOne({ system: system_id, system_type_attribute });
+
+        const sensor_system_attributes = await SensorSystemAttribute.find({ system_attribute });
         let sensors = [];
-        for (let i = 0; i < sensor_types.length; i++) {
-            sensors.push.apply(sensors, await Sensor.find({ sensor_type_id: sensor_types[i].sensor_type_id,
-                                                            system_id }));
+        for (let i = 0; i < sensor_system_attributes.length; i++) {
+            sensors.push.apply(sensors, await Sensor.find({ _id: sensor_system_attributes[i].sensor }));
         }
 
         let payloads = [];
         for (let i = 0; i < sensors.length; i++) {
-            const sensorPayloads = await Payload.find({ sensor_id: sensors[i]._id, 
-                                                        data: { $gte: data_from, $lte: data_to } });
+            const sensorPayloads = await Payload.find({ sensor: sensors[i]._id, 
+                                                        date: { $gte: data_from, $lte: data_to } });
             
             let samples = [];
             if (sensorPayloads.length > 100)
@@ -57,11 +65,11 @@ module.exports = {
             
             let sensorPayloadsValues = [];
             for (let j = 0; j < samples.length; j++) {
-                const { _id, data } = sensorPayloads[Math.round(samples[j])];
+                const { _id, date } = sensorPayloads[Math.round(samples[j])];
     
-                const { value } = await PayloadAttribute.findOne({ payload_id: _id, attribute_id });
+                const { value } = await PayloadAttribute.findOne({ payload: _id, attribute: attribute_id });
     
-                sensorPayloadsValues.push({ x: data, y: value });
+                sensorPayloadsValues.push({ x: date, y: value });
             }
 
             payloads.push({ sensor: sensors[i], payloads: sensorPayloadsValues });

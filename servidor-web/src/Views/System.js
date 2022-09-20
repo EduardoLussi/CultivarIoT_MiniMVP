@@ -24,9 +24,10 @@ class System extends Component {
     }
 
     registerToSocket = () => {
+        console.log(`payload${this.props.system._id}`)
         const socket = io("http://localhost:3333")
         socket.on(`payload${this.props.system._id}`, payload => {
-            let { payloadAttributes, sensor_id } = payload;
+            let { payloadAttributes, sensor_id } = payload
             let sensorsValues = this.state.sensorsValues
             for (let i = 0; i < payloadAttributes.length; i++) {
                 if (!sensorsValues[sensor_id]) {
@@ -39,15 +40,19 @@ class System extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if (this.props.system != prevProps.system) {
-            this.registerToSocket();
+        if (this.props.system !== prevProps.system) {
+            this.registerToSocket()
             this.updateSystem()
         }
-        if (this.state.attribute != prevState.attribute || 
-            this.state.from != prevState.from || 
-            this.state.to != prevState.to) {
+        if (this.state.attribute !== prevState.attribute || 
+            this.state.from !== prevState.from || 
+            this.state.to !== prevState.to) {
             this.updateChart()
         }
+    }
+
+    async componentDidMount() {
+        this.updateSystem()
     }
 
     async updateChart() {
@@ -63,6 +68,7 @@ class System extends Component {
     }
 
     updateSystem() {
+        console.log(this.props.system.attributes)
         this.setState({ attributes: this.props.system.attributes, 
                         attribute: this.props.system.attributes[0], 
                         from: "", to: "" })
