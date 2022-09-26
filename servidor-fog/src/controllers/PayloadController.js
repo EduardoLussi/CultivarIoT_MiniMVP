@@ -29,6 +29,28 @@ module.exports = {
         const { system_attribute } = await SensorSystemAttribute.findOne({ sensor: sensor_id });
         const { system } = await SystemAttribute.findOne({ _id: system_attribute });
         req.io.emit(`payload${system}`, { payloadAttributes, sensor_id });
+
+        const sensorSystemAttributes = await SensorSystemAttribute.find({ sensor: sensor_id });
+        for (let i = 0; i < sensorSystemAttributes.length; i++) {
+            const { active, target_value, system_type_attribute } = await SystemAttribute.findOne({ _id: sensorSystemAttributes[i].system_attribute });
+            if (active) {
+                const { attribute, actuator_increase } = await SystemTypeAttribute.findOne({ _id: system_type_attribute });
+                for (let j = 0; j < payloadAttributes.length; j++) {
+                    const { attribute_id, value } = payloadAttributes[j];
+                    
+                    if (attribute == attribute_id) {
+                        if (value > target_value) {
+                            if (actuator_increase) console.log("Desligando solenoide");
+                            else console.log("Ligando solenoide")
+                        } else if (value < target_value) {
+                            if (!actuator_increase) console.log("Desligando solenoide");
+                            else console.log("Ligando solenoide")
+                        }
+                    }
+                }    
+            }
+        }
+
         return res.json(payload);
     },
 

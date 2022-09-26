@@ -4,6 +4,7 @@ const Attribute = require('../models/Attribute');
 const SystemTypeAttribute = require('../models/SystemTypeAttribute');
 const SystemAttribute = require('../models/SystemAttribute');
 const SensorSystemAttribute = require('../models/SensorSystemAttribute');
+const { findOneAndUpdate } = require('../models/System');
 
 module.exports = {
     async showAll(req, res) {
@@ -21,10 +22,10 @@ module.exports = {
                 systemInfo.attributes = [];
                 for (let j = 0; j < systemTypeAttributes.length; j++) {
                     const { _id: idSystemTypeAttribute, attribute } = systemTypeAttributes[j];
-                    const { _id } = await SystemAttribute.findOne({ system: systemId, system_type_attribute: idSystemTypeAttribute });
+                    const { _id, target_value, active } = await SystemAttribute.findOne({ system: systemId, system_type_attribute: idSystemTypeAttribute });
                     
                     const { name, unit } = await Attribute.findOne({ _id: attribute.toString() });
-                    systemInfo.attributes.push({ _id: attribute.toString(), name, unit, sensors: [] });
+                    systemInfo.attributes.push({ _id: attribute.toString(), name, unit, target_value, active, sensors: [] });
 
                     const sensorSystemAttributes = await SensorSystemAttribute.find({ system_attribute: _id });
                     for (let k = 0; k < sensorSystemAttributes.length; k++) {                                     
@@ -40,6 +41,44 @@ module.exports = {
         } catch (error) {
             console.log(error);
             return res.json([]);
+        }
+    },
+
+    async changeTargetValue(req, res) {
+        try {
+            const { system, attribute } = req.headers;
+            
+            const { system_type } = await System.findOne({ _id: system });
+            
+            const { _id: system_type_attribute } = await SystemTypeAttribute.findOne({ attribute, system_type });
+            
+            const { target_value } = req.body;
+
+            await SystemAttribute.findOneAndUpdate({ system, system_type_attribute }, { target_value });
+
+            return res.json({ target_value });
+        } catch(error) {
+            console.log(error);
+            return res.json({ target_value: false });
+        }
+    },
+
+    async toggleAttributeControl(req, res) {
+        try {
+            const { system, attribute } = req.headers;
+            
+            const { system_type } = await System.findOne({ _id: system });
+            
+            const { _id: system_type_attribute } = await SystemTypeAttribute.findOne({ attribute, system_type });
+            
+            const { active } = req.body;
+
+            await SystemAttribute.findOneAndUpdate({ system, system_type_attribute }, { active });
+
+            return res.json({ active });
+        } catch(error) {
+            console.log(error);
+            return res.json(null);
         }
     }
 }

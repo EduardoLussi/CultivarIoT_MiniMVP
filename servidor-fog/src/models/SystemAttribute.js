@@ -9,7 +9,8 @@ const SystemAttributeSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'system'
     },
-    target_value: Number
+    target_value: Number,
+    active: Boolean
 });
 
 module.exports = mongoose.model('system_attribute', SystemAttributeSchema);

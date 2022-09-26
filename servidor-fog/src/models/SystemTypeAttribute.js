@@ -17,6 +17,7 @@ const SystemTypeAttributeSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'system_type'
     },
+    actuator_increase: Boolean
 });
 
 module.exports = mongoose.model('system_type_attribute', SystemTypeAttributeSchema);

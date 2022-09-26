@@ -4,6 +4,8 @@ import io from 'socket.io-client'
 
 import './System.css'
 
+import Switch from '@mui/material/Switch'
+
 import Chart from './Chart'
 
 import api from '../api'
@@ -16,6 +18,7 @@ class System extends Component {
             _id: "",
             name: "",
             unit: "",
+            target: 0,
             sensors: []
         },
         from: "",
@@ -67,11 +70,54 @@ class System extends Component {
         this.setState({ chartData: res.data })
     }
 
+    async changeTarget(attribute_index, value) {
+        const { _id, target_value } = this.state.attributes[attribute_index]
+        const res = await api.post("systems/attribute/target_value", 
+            { 
+                "target_value": target_value + value 
+            },
+            {
+                headers: {
+                    "system": this.props.system._id,
+                    "attribute": _id,
+                }
+            }
+        );
+        if (res.data.target_value) {
+            this.setState(prevState => ({
+                attributes: prevState.attributes.map((attribute, i) =>
+                    i === attribute_index ? { ...attribute, target_value: res.data.target_value } : attribute
+                )
+            }))
+        }
+    }
+
     updateSystem() {
-        console.log(this.props.system.attributes)
         this.setState({ attributes: this.props.system.attributes, 
                         attribute: this.props.system.attributes[0], 
                         from: "", to: "" })
+    }
+
+    async toggleAttributeControl(attribute_index) {
+        const { _id, active } = this.state.attributes[attribute_index]
+        const res = await api.post("systems/attribute/toggleControl", 
+            { 
+                "active": !active
+            },
+            {
+                headers: {
+                    "system": this.props.system._id,
+                    "attribute": _id,
+                }
+            }
+        );
+        if (res.data) {
+            this.setState(prevState => ({
+                attributes: prevState.attributes.map((attribute, i) =>
+                    i === attribute_index ? { ...attribute, active: res.data.active } : attribute
+                )
+            }))
+        }
     }
 
     render() {
@@ -86,7 +132,15 @@ class System extends Component {
                             {this.props.system.attributes.map((attribute, i) => {
                                 return (
                                     <li>
-                                        <p>{i+1}- {attribute.name.charAt(0).toUpperCase() + attribute.name.slice(1)}</p>
+                                        <div>
+                                            <p>{i+1}- {attribute.name.charAt(0).toUpperCase() + attribute.name.slice(1)}</p>
+                                            <Switch 
+                                                className='system-attributes-switch' 
+                                                inputProps={{ 'aria-label': 'controlled' }}
+                                                checked={this.state.attributes.length ? this.state.attributes[i].active : false}
+                                                onChange={() => this.toggleAttributeControl(i)}
+                                            />
+                                        </div>
                                         <ul className="system-attribute-sensors">
                                             {attribute.sensors.map(sensor => {
                                                 return (
@@ -100,6 +154,16 @@ class System extends Component {
                                                     </li>
                                                 )
                                             })}
+                                            <li className="system-attribute-sensors-value">
+                                                <p>
+                                                    Desejável:
+                                                </p>
+                                                <div className="attribute-input">
+                                                    <button className="attribute-input-less" onClick={() => this.changeTarget(i, -1)}>-</button>
+                                                    <input type="number" min="60" max="80" value={this.state.attributes.length ? this.state.attributes[i].target_value : ""}/>
+                                                    <button className="attribute-input-more" onClick={() => this.changeTarget(i, 1)}>+</button>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </li>
                                 )
@@ -117,7 +181,7 @@ class System extends Component {
                                         return (
                                             <li key={i} onClick={() => { this.setState({ attribute: attribute }) }}>
                                                 {i+1}
-                                                <span>{i+1} - {attribute.name}</span>                
+                                                <span>{i+1} - {attribute.name}</span>
                                             </li>
                                         )
                                     })}
