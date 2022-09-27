@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:current-alpine3.15
 WORKDIR /app
 
 ENV PATH /app/node_modules/.bin:$PATH
@@ -6,6 +6,6 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
 COPY package-lock.json ./
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 COPY . ./
 CMD ["npm", "start"]

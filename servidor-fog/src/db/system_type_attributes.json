@@ -4,13 +4,15 @@
         "attribute": { "$oid": "626fea1b9668ef298f120f7e" },
         "system_type": { "$oid": "62f6a67c9ea9b77db9933deb" },
         "sensor_type": { "$oid": "62f6a7d49ea9b77db9933df1" },
-        "actuator_type": { "$oid": "632a1edca61c5ec44ef64244" }
+        "actuator_type": { "$oid": "632a1edca61c5ec44ef64244" },
+        "actuator_increase": true
     },
     {
         "_id": { "$oid": "632a2056a61c5ec44ef64256" },
         "attribute": { "$oid": "626fea1b9668ef298f120f7f" },
         "system_type": { "$oid": "62f6a67c9ea9b77db9933deb" },
         "sensor_type": { "$oid": "62f6a7d49ea9b77db9933df1" },
-        "actuator_type": { "$oid": "632a1edca61c5ec44ef64244" }
+        "actuator_type": { "$oid": "632a1edca61c5ec44ef64244" },
+        "actuator_increase": false
     }
 ]

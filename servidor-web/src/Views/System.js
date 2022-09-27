@@ -160,7 +160,7 @@ class System extends Component {
                                                 </p>
                                                 <div className="attribute-input">
                                                     <button className="attribute-input-less" onClick={() => this.changeTarget(i, -1)}>-</button>
-                                                    <input type="number" min="60" max="80" value={this.state.attributes.length ? this.state.attributes[i].target_value : ""}/>
+                                                    <input type="number" min="0" value={this.state.attributes.length ? this.state.attributes[i].target_value : ""}/>
                                                     <button className="attribute-input-more" onClick={() => this.changeTarget(i, 1)}>+</button>
                                                 </div>
                                             </li>

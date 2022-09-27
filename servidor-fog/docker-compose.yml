@@ -2,7 +2,7 @@ version: "2.4"
 
 services:
   db:
-    image: mongo:latest
+    image: mongo:4.2.23-rc1
     container_name: cultivariot_mongodb
     restart: always
     ports:
@@ -14,7 +14,7 @@ services:
       - MONGO_INITDB_DATABASE=CultivarIoT
   
   api:
-    image: node:latest
+    image: node:current-alpine3.15
     container_name: cultivariot_node
     restart: always
     depends_on:

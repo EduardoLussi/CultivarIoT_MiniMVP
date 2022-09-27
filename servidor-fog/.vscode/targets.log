@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Sep 26 15:46:00 2022
+# Make data base, printed on Tue Sep 27 13:40:22 2022
 
 # Variables
 
@@ -33,7 +33,7 @@ SYSTEMROOT = C:\Windows
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+PSMODULEPATH = %ProgramFiles%\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
@@ -65,8 +65,7 @@ TMP = C:\Users\eduar\AppData\Local\Temp
 # environment
 PROCESSOR_ARCHITEW6432 = AMD64
 # makefile
-MAKEF 
-LAGS = pqrR
+MAKEFLAGS = pqrR
 # environment
 ONEDRIVE = C:\Users\eduar\OneDrive
 # environment
@@ -85,8 +84,7 @@ MFLAGS = -pqrR
 .SHELLFLAGS := -c
 # environment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
-# 
- automatic
+# automatic
 +D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST := Makefile
@@ -105,8 +103,7 @@ VSCODE_NLS_CONFIG = {"locale":"pt-br","availableLanguages":{},"_languagePackSupp
 # environment
 ONEDRIVECONSUMER = C:\Users\eduar\OneDrive
 # default
-MA 
-KE_HOST := Windows32
+MAKE_HOST := Windows32
 # environment
 PROGRAMDATA = C:\ProgramData
 # default
@@ -126,9 +123,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Rockwell Software\RSCommon;C:\ProgramData\Oracle\Ja 
-va\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\eduar\AppData\Local\Microsoft\WindowsApps;;C:\Users\eduar\AppData\Local\Programs\Microsof 
-t VS Code\bin;C:\Users\eduar\AppData\Roaming\npm;C:\Program Files\swipl\bin
+PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Rockwell Software\RSCommon;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\eduar\AppData\Local\Microsoft\WindowsApps;C:\Users\eduar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\eduar\AppData\Roaming\npm;C:\Program Files\swipl\bin
 # environment
 COMPUTERNAME = DESKTOP-LPEG67N
 # default
@@ -150,8 +145,7 @@ COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # environment
 PROGRAMW6432 = C:\Program Files
 # environment
-PATHEXT = . 
-COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 # automatic
 +F = $(notdir $+)
 # environment
@@ -209,7 +203,8 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 # variable set hash-table stats:
 # Load=94/1024=9%, Rehash=0, Collisions=9/121=7%
 
-# Pattern-specific Variable Values
+# Patte 
+rn-specific Variable Values
 
 # No pattern-specific variable values.
 
@@ -275,8 +270,7 @@ down:
 	docker-compose down
 
 # files hash-table stats:
-#  
-Load=8/1024=1%, Rehash=0, Collisions=0/26=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/26=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
@@ -289,6 +283,6 @@ Load=8/1024=1%, Rehash=0, Collisions=0/26=0%
 # strcache performance: lookups = 32 / hit rate = 46%
 # hash-table stats:
 # Load=17/8192=0%, Rehash=0, Collisions=0/32=0%
-# Finished Make data base on Mon Sep 26 15:46:00 2022
+# Finished Make data base on Tue Sep 27 13:40:22 2022
 
  
