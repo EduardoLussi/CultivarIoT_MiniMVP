@@ -4,7 +4,7 @@ services:
   db:
     image: mongo:4.2.23-rc1
     container_name: cultivariot_mongodb
-    restart: always
+    restart: unless-stopped
     ports:
       - 27018:27017
     volumes:
@@ -13,18 +13,25 @@ services:
     environment:
       - MONGO_INITDB_DATABASE=CultivarIoT
   
+  db-seed:
+    build:
+      context: ./src/db
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+
   api:
-    image: node:current-alpine3.15
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: cultivariot_node
     restart: always
     depends_on:
-      - db
+      - db-seed
     ports:
       - 3333:3333
     volumes:
       - .:/usr/src/app
-    working_dir: /usr/src/app
-    command: npm start
     logging:
       driver: "json-file"
       options:

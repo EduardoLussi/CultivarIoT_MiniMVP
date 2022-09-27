@@ -4,13 +4,12 @@ const Attribute = require('../models/Attribute');
 const SystemTypeAttribute = require('../models/SystemTypeAttribute');
 const SystemAttribute = require('../models/SystemAttribute');
 const SensorSystemAttribute = require('../models/SensorSystemAttribute');
-const { findOneAndUpdate } = require('../models/System');
 
 module.exports = {
     async showAll(req, res) {
         try {
             const { system_type } = req.headers;
-        
+            
             const systems = await System.find({ system_type });
             const systemTypeAttributes = await SystemTypeAttribute.find({ system_type });
             
@@ -39,7 +38,7 @@ module.exports = {
             
             return res.json(systemsInfo);
         } catch (error) {
-            console.log(error);
+            // console.log(error);
             return res.json([]);
         }
     },

@@ -1,0 +1,30 @@
+[
+    {
+        "_id": { "$oid": "632a2152a61c5ec44ef64261" },
+        "system": { "$oid": "62f6a70e9ea9b77db9933dee" },
+        "system_type_attribute": { "$oid": "632a2056a61c5ec44ef64255" },
+        "target_value": 85,
+        "active": false
+    },
+    {
+        "_id": { "$oid": "632a2152a61c5ec44ef64262" },
+        "system": { "$oid": "62f6a70e9ea9b77db9933dee" },
+        "system_type_attribute": { "$oid": "632a2056a61c5ec44ef64256" },
+        "target_value": 23,
+        "active": false
+    },
+    {
+        "_id": { "$oid": "632a222fa61c5ec44ef64269" },
+        "system": { "$oid": "63123eb8dce431fb07b98447" },
+        "system_type_attribute": { "$oid": "632a2056a61c5ec44ef64255" },
+        "target_value": 84,
+        "active": false
+    },
+    {
+        "_id": { "$oid": "632a222fa61c5ec44ef6426a" },
+        "system": { "$oid": "63123eb8dce431fb07b98447" },
+        "system_type_attribute": { "$oid": "632a2056a61c5ec44ef64256" },
+        "target_value": 22,
+        "active": false
+    }
+]

@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Sep 27 13:40:22 2022
+# Make data base, printed on Tue Sep 27 18:41:50 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
 # environment
 LOCALAPPDATA = C:\Users\eduar\AppData\Local
 # environment
-VSCODE_CWD = D:\Dudu\CCO\CultivarIoT\CultivarIoT_MiniMVP\servidor-fog
+VSCODE_CWD = D:\Dudu\CCO\CultivarIoT\teste\CultivarIoT_MiniMVP\servidor-fog
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -33,7 +33,7 @@ SYSTEMROOT = C:\Windows
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-PSMODULEPATH = %ProgramFiles%\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
@@ -43,7 +43,8 @@ CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_17480_EAAXLSFACAYBAZSX
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
-VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+VSCODE_HANDL 
+ES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # automatic
@@ -71,7 +72,7 @@ ONEDRIVE = C:\Users\eduar\OneDrive
 # environment
 OPENMODELICAHOME = C:\Program Files\OpenModelica1.18.1-64bit\
 # makefile
-CURDIR := d:/Dudu/CCO/CultivarIoT/CultivarIoT_MiniMVP/servidor-fog
+CURDIR := d:/Dudu/CCO/CultivarIoT/teste/CultivarIoT_MiniMVP/servidor-fog
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
@@ -123,7 +124,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Rockwell Software\RSCommon;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\eduar\AppData\Local\Microsoft\WindowsApps;C:\Users\eduar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\eduar\AppData\Roaming\npm;C:\Program Files\swipl\bin
+PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Rockwell Software\RSCommon;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\eduar\AppData\Local\Microsoft\WindowsApps;;C:\Users\eduar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\eduar\AppData\Roaming\npm;C:\Program Files\swipl\bin
 # environment
 COMPUTERNAME = DESKTOP-LPEG67N
 # default
@@ -186,7 +187,8 @@ TEMP = C:\Users\eduar\AppData\Local\Temp
 VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.71.2-main-sock
 # default
 .RECIPEPREFIX := 
-# automatic
+# automati 
+c
 <F = $(notdir $<)
 # default
 SUFFIXES := 
@@ -201,18 +203,18 @@ PROCESSOR_REVISION = 9e09
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 # variable set hash-table stats:
-# Load=94/1024=9%, Rehash=0, Collisions=9/121=7%
+# Load=94/1024=9%, Rehash=0, Collisions=9/ 
+121=7%
 
-# Patte 
-rn-specific Variable Values
+# Pattern-specific Variable Values
 
 # No pattern-specific variable values.
 
 # Directories
 
-# . (key d:/Dudu/CCO/CultivarIoT/CultivarIoT_MiniMVP/servidor-fog, mtime 1663714133): 10 files, no impossibilities.
+# . (key d:/Dudu/CCO/CultivarIoT/teste/CultivarIoT_MiniMVP/servidor-fog, mtime 1664310073): 11 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -223,7 +225,7 @@ rn-specific Variable Values
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-26 17:58:35
+#  Last modified 2022-09-27 14:22:53
 #  File has been updated.
 #  Successfully updated.
 
@@ -277,12 +279,12 @@ down:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 17 / storage = 142 B / avg = 8 B
-# current buf: size = 8174 B / used = 142 B / count = 17 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 18 / storage = 153 B / avg = 8 B
+# current buf: size = 8174 B / used = 153 B / count = 18 / avg = 8 B
 
-# strcache performance: lookups = 32 / hit rate = 46%
+# strcache performance: lookups = 33 / hit rate = 45%
 # hash-table stats:
-# Load=17/8192=0%, Rehash=0, Collisions=0/32=0%
-# Finished Make data base on Tue Sep 27 13:40:22 2022
+# Load=18/8192=0%, Rehash=0, Collisions=0/33=0%
+# Finished Make data base on Tue Sep 27 18:41:50 2022
 
  
