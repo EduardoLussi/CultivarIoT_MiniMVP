@@ -1,5 +1,5 @@
 make.exe --dry-run --always-make --keep-going --print-directory
-make: Entering directory 'd:/Dudu/CCO/CultivarIoT/teste/CultivarIoT_MiniMVP/servidor-fog'
+make: Entering directory 'd:/Dudu/CCO/CultivarIoT/CultivarIoT_MiniMVP/servidor-fog'
 docker-compose up
-make: Leaving directory 'd:/Dudu/CCO/CultivarIoT/teste/CultivarIoT_MiniMVP/servidor-fog'
+make: Leaving directory 'd:/Dudu/CCO/CultivarIoT/CultivarIoT_MiniMVP/servidor-fog'
  

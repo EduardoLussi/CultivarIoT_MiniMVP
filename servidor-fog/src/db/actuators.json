@@ -2,6 +2,6 @@
     {
         "_id": { "$oid": "632a258da61c5ec44ef64282" },
         "actuator_type": { "$oid": "632a1edca61c5ec44ef64244" },
-        "address": "192.168.0.12:3333"
+        "address": "192.168.0.12"
     }
 ]

@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Sep 27 18:41:50 2022
+# Make data base, printed on Thu Sep 29 15:44:13 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
 # environment
 LOCALAPPDATA = C:\Users\eduar\AppData\Local
 # environment
-VSCODE_CWD = D:\Dudu\CCO\CultivarIoT\teste\CultivarIoT_MiniMVP\servidor-fog
+VSCODE_CWD = D:\Dudu\CCO\CultivarIoT\CultivarIoT_MiniMVP\servidor-fog
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -39,12 +39,11 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_17480_EAAXLSFACAYBAZSX
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12308_UJBHDTLQRREOKWWN
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
-VSCODE_HANDL 
-ES_UNCAUGHT_ERRORS = true
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # automatic
@@ -72,7 +71,7 @@ ONEDRIVE = C:\Users\eduar\OneDrive
 # environment
 OPENMODELICAHOME = C:\Program Files\OpenModelica1.18.1-64bit\
 # makefile
-CURDIR := d:/Dudu/CCO/CultivarIoT/teste/CultivarIoT_MiniMVP/servidor-fog
+CURDIR := d:/Dudu/CCO/CultivarIoT/CultivarIoT_MiniMVP/servidor-fog
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
@@ -92,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 17480
+VSCODE_PID = 12308
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -187,8 +186,7 @@ TEMP = C:\Users\eduar\AppData\Local\Temp
 VSCODE_IPC_HOOK = \\.\pipe\8ac32c891479da63a4dbcd890ee50b90-1.71.2-main-sock
 # default
 .RECIPEPREFIX := 
-# automati 
-c
+# automatic
 <F = $(notdir $<)
 # default
 SUFFIXES := 
@@ -203,8 +201,7 @@ PROCESSOR_REVISION = 9e09
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 # variable set hash-table stats:
-# Load=94/1024=9%, Rehash=0, Collisions=9/ 
-121=7%
+# Load=94/1024=9%, Rehash=0, Collisions=9/121=7%
 
 # Pattern-specific Variable Values
 
@@ -212,9 +209,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 
 # Directories
 
-# . (key d:/Dudu/CCO/CultivarIoT/teste/CultivarIoT_MiniMVP/servidor-fog, mtime 1664310073): 11 files, no impossibilities.
+# . (key d:/Dudu/CCO/CultivarIoT/CultivarIoT_MiniMVP/servidor-fog, mtime 1664315018): 12 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -225,13 +222,14 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-09-27 14:22:53
+#  Last modified 2022-08-26 17:58:35
 #  File has been updated.
 #  Successfully updated.
 
 logs:
 #  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
+#  Impl 
+icit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 14):
@@ -279,12 +277,12 @@ down:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 18 / storage = 153 B / avg = 8 B
-# current buf: size = 8174 B / used = 153 B / count = 18 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 19 / storage = 164 B / avg = 8 B
+# current buf: size = 8174 B / used = 164 B / count = 19 / avg = 8 B
 
-# strcache performance: lookups = 33 / hit rate = 45%
+# strcache performance: lookups = 34 / hit rate = 44%
 # hash-table stats:
-# Load=18/8192=0%, Rehash=0, Collisions=0/33=0%
-# Finished Make data base on Tue Sep 27 18:41:50 2022
+# Load=19/8192=0%, Rehash=0, Collisions=0/34=0%
+# Finished Make data base on Thu Sep 29 15:44:13 2022
 
  

@@ -1,11 +1,12 @@
 const Payload = require('../models/Payload');
 const Sensor = require('../models/Sensor');
 const PayloadAttribute = require('../models/PayloadAttribute');
-const AttributeSensorType = require('../models/AttributeSensorType');
 const SystemAttribute = require('../models/SystemAttribute');
 const SystemTypeAttribute = require('../models/SystemTypeAttribute');
 const System = require('../models/System');
 const SensorSystemAttribute = require('../models/SensorSystemAttribute');
+
+const ActuatorController = require('./ActuatorController');
 
 function linspace(start, stop, num, endpoint = true) {
     const div = endpoint ? (num - 1) : num;
@@ -40,11 +41,11 @@ module.exports = {
                     
                     if (attribute == attribute_id) {
                         if (value > target_value) {
-                            if (actuator_increase) console.log("Desligando solenoide");
-                            else console.log("Ligando solenoide")
+                            if (actuator_increase) ActuatorController.turn(false, system_attribute);
+                            else ActuatorController.turn(true, system_attribute);
                         } else if (value < target_value) {
-                            if (!actuator_increase) console.log("Desligando solenoide");
-                            else console.log("Ligando solenoide")
+                            if (!actuator_increase) ActuatorController.turn(false, system_attribute);
+                            else ActuatorController.turn(true, system_attribute);
                         }
                     }
                 }    
