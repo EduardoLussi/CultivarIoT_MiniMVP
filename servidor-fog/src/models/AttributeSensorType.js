@@ -1,6 +1,13 @@
+/**
+ * AttributeSensorType model for mongodb database
+ * Describes an Attribute that can be readed by a SensorType
+ */
+
+// Import mongoose
 const mongoose = require('mongoose');
 
-const AttributeSensorType = new mongoose.Schema({
+// Create schema
+const AttributeSensorTypeSchemma = new mongoose.Schema({
     attribute: { 
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'attribute' 
@@ -11,4 +18,6 @@ const AttributeSensorType = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('attribute_sensor_type', AttributeSensorType);
+// Exports mongoose model for collection attribute_sensor_type
+// of AttributeSensorTypeSchemma
+module.exports = mongoose.model('attribute_sensor_type', AttributeSensorTypeSchemma);
