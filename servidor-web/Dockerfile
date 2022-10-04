@@ -8,7 +8,7 @@ COPY package.json /app/package.json
 COPY package-lock.json /app/package-lock.json
 
 RUN npm install --legacy-peer-deps
-RUN sudo chown -R $(whoami) /app/node_modules/.cache
+RUN chown -R $(whoami) /app/node_modules/.cache
 
 COPY . ./
 
