@@ -154,56 +154,11 @@ class System extends Component {
                                                     </li>
                                                 )
                                             })}
-                                            <li className="system-attribute-sensors-value">
-                                                <p>
-                                                    Desejável:
-                                                </p>
-                                                <div className="attribute-input">
-                                                    <button className="attribute-input-less" onClick={() => this.changeTarget(i, -1)}>-</button>
-                                                    <input type="number" min="0" value={this.state.attributes.length ? this.state.attributes[i].target_value : ""}/>
-                                                    <button className="attribute-input-more" onClick={() => this.changeTarget(i, 1)}>+</button>
-                                                </div>
-                                            </li>
                                         </ul>
                                     </li>
                                 )
                             })}
                         </ul>
-                    </div>
-                </div>
-
-                <div className="expand-data">
-                    <div className="graph-container">
-                        <div className="graph-content">
-                            <div className="graph-attributes">
-                                <ul>
-                                    {this.state.attributes.map((attribute, i) => {
-                                        return (
-                                            <li key={i} onClick={() => { this.setState({ attribute: attribute }) }}>
-                                                {i+1}
-                                                <span>{i+1} - {attribute.name}</span>
-                                            </li>
-                                        )
-                                    })}
-                                </ul>
-                            </div>
-                            <div className="graph">
-                                <h1 className="graph-title">{this.state.attribute.name}</h1>
-                                <Chart attribute={this.state.attribute} data={this.state.chartData} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="graph-search">
-                        <div className="from-to">
-                            <div>
-                                <p>De:</p>
-                                <input type="datetime-local" step="1" onChange={e => this.setState({from: e.target.value})}/>
-                            </div>
-                            <div>
-                                <p>Até:</p>
-                                <input type="datetime-local" step="1" onChange={e => this.setState({to: e.target.value})}/>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div> 

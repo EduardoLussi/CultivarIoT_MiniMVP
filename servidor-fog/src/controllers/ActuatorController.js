@@ -23,7 +23,7 @@ module.exports = {
             let value;
             if (on) value = "on";
             else value = "off";
-
+            
             // Turn ON or OFF all the actuators
             for (let i = 0; i < actuatorsSystemAttribute.length; i++) {
                 // Get Actuator address
@@ -31,12 +31,12 @@ module.exports = {
                 const { address } = await Actuator.findOne({ _id: actuator });
 
                 // Turn ON or OFF the Actuator by a HTTP POST request to it
-                axios.post(`http://${address}:8081/zeroconf/switch`, {
+                await axios.post(`http://${address}:8081/zeroconf/switch`, {
                     "data": {
                         "switch": value
                     }
                 });
-                
+
             }
         } catch (err) {
             console.log(err);

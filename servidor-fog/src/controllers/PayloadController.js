@@ -48,29 +48,29 @@ module.exports = {
         req.io.emit(`payload${system}`, { payloadAttributes, sensor_id });
 
         // Checks the necessity of turning ON or OFF the Actuators
-        const sensorSystemAttributes = await SensorSystemAttribute.find({ sensor: sensor_id }); // Get all Systems controls related to the Sensor
-        for (let i = 0; i < sensorSystemAttributes.length; i++) {
-            // Get informations about the System control over the Attribute
-            const { active, target_value, system_type_attribute } = await SystemAttribute.findOne({ _id: sensorSystemAttributes[i].system_attribute });
-            if (active) {   // If the Attribute is being controlled
-                const { attribute, actuator_increase } = await SystemTypeAttribute.findOne({ _id: system_type_attribute });
-                // Verifies if the value readed by the Sensor is above or below the desired for the SystemAttribute
-                for (let j = 0; j < payloadAttributes.length; j++) {
-                    const { attribute_id, value } = payloadAttributes[j];
+        // const sensorSystemAttributes = await SensorSystemAttribute.find({ sensor: sensor_id }); // Get all Systems controls related to the Sensor
+        // for (let i = 0; i < sensorSystemAttributes.length; i++) {
+        //     // Get informations about the System control over the Attribute
+        //     const { active, target_value, system_type_attribute } = await SystemAttribute.findOne({ _id: sensorSystemAttributes[i].system_attribute });
+        //     if (active) {   // If the Attribute is being controlled
+        //         const { attribute, actuator_increase } = await SystemTypeAttribute.findOne({ _id: system_type_attribute });
+        //         // Verifies if the value readed by the Sensor is above or below the desired for the SystemAttribute
+        //         for (let j = 0; j < payloadAttributes.length; j++) {
+        //             const { attribute_id, value } = payloadAttributes[j];
                     
-                    if (attribute == attribute_id) {
-                        if (value > target_value) {
-                            if (actuator_increase) ActuatorController.turn(false, system_attribute);
-                            else ActuatorController.turn(true, system_attribute);
-                        } else if (value < target_value) {
-                            if (!actuator_increase) ActuatorController.turn(false, system_attribute);
-                            else ActuatorController.turn(true, system_attribute);
-                        }
-                        break;
-                    }
-                }    
-            }
-        }
+        //             if (attribute == attribute_id) {
+        //                 if (value > target_value) {
+        //                     if (actuator_increase) ActuatorController.turn(false, system_attribute);
+        //                     else ActuatorController.turn(true, system_attribute);
+        //                 } else if (value < target_value) {
+        //                     if (!actuator_increase) ActuatorController.turn(false, system_attribute);
+        //                     else ActuatorController.turn(true, system_attribute);
+        //                 }
+        //                 break;
+        //             }
+        //         }    
+        //     }
+        // }
 
         return res.json(payload);
     },

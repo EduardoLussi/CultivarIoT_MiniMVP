@@ -31,7 +31,6 @@ ul.systemsList::-webkit-scrollbar-thumb {
 }
 
 ul.systemsList>li {
-    width: 70%;
     height: 85%;
-    margin: 0 4vw;
+    margin: 0 2vw;
 }

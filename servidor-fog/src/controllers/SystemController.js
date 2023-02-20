@@ -10,6 +10,9 @@ const SystemTypeAttribute = require('../models/SystemTypeAttribute');
 const SystemAttribute = require('../models/SystemAttribute');
 const SensorSystemAttribute = require('../models/SensorSystemAttribute');
 
+// Import other controllers
+const ActuatorController = require('./ActuatorController');
+
 module.exports = {
     /**
      * Returns all Systems of a SystemType
@@ -92,6 +95,7 @@ module.exports = {
      */
     async toggleAttributeControl(req, res) {
         try {
+            
             // Get System and Attribute from header
             const { system, attribute } = req.headers;
             
@@ -103,8 +107,14 @@ module.exports = {
             
             // Get from header if the control is going to be turned ON or OFF
             const { active } = req.body;
-
+            
             // Update the control value in the System control over the Attribute
+            // await SystemAttribute.findOneAndUpdate({ system, system_type_attribute }, { active });
+
+            const { _id: system_attribute } = await SystemAttribute.findOne({ system, system_type_attribute });
+
+            ActuatorController.turn(active, system_attribute.toString());
+
             await SystemAttribute.findOneAndUpdate({ system, system_type_attribute }, { active });
 
             return res.json({ active });
